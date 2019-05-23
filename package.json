@@ -3,17 +3,15 @@
     "engines": {
         "atom": ">=1.0.0 <2.0.0"
     },
-
     "keywords": [
         "idle",
         "light",
         "syntax",
         "theme"
     ],
-
     "license": "MIT",
     "name": "idle-atom-syntax",
     "repository": "https://www.github.com/userfa15/idle-atom-syntax",
     "theme": "syntax",
-    "version": "0.0.0"
+    "version": "1.0.0"
 }
