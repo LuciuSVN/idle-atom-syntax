@@ -1,0 +1,72 @@
+/* This is the master stylesheet.  It defines rules for non-syntax element and
+ * imports the syntax stylesheet __base__.less, which imports all other syntax
+ * stylesheets.
+*/
+
+@import "variables.less";
+@import "syntax/__base__.less";
+
+atom-text-editor {
+    background-color: @bg;
+    color: @fg;
+
+    .bracket-matcher .region {
+        border-bottom: @definition solid thin;
+    }
+
+    .cursor {
+        color: @cursor;
+        border-width: 2px;
+    }
+
+    .cursor-line {
+        background-color: @light-grey;
+    }
+
+    .fold-marker:after,
+    .gutter .line-number.folded,
+    .gutter .line-number:after {
+        color: @fg;
+    }
+
+    .gutter {
+        background-color: @bg;
+        color: @fg;
+
+        .line-number.cursor-line {
+            background-color: @light-grey;
+        }
+    }
+
+    .indent-guide {
+        color: @fg;
+    }
+
+    .invisible {
+        color: @fg;
+    }
+
+    .find-result .region.region.region {
+        background-color: @selection-bg;
+        border-color: @selection-bg;
+        border-radius: 0px;
+    }
+
+    .current-result .region.region.region {
+        background-color: @light-grey;
+        border-color: @light-grey;
+        border-radius: 0px;
+    }
+
+    .selection {
+        // Unfortunately, it is *not* possible to change the selection *text*
+        // colour, only the background.  See here:
+        // https://github.com/atom/atom/issues/2886
+        background-color: @selection-bg;
+    }
+
+    .wrap-guide {
+        background-color: @fg;
+    }
+
+}
