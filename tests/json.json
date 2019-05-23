@@ -1,0 +1,10 @@
+{
+    "key1": "string",
+    "key2": [ "array" ],
+    "key3": { "dict": "value" },
+    "key4": true,
+    "key5": false,
+    "key6": 0,
+    "key7": 0.0,
+    "key8": invalid
+}

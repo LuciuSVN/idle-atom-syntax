@@ -2,6 +2,7 @@
 ## New Optimised Language
 
 * GitHub Flavored Markdown
+* JavaScript Object Notation
 * Python via [MagicPython]
 
 MagicPython is supported over the core `language-python` as it provides better

@@ -1,0 +1,15 @@
+@import "../variables.less";
+
+.syntax--source.syntax--json {
+    .syntax--meta.syntax--structure.syntax--dictionary {
+        &.syntax--key .syntax--string {
+            color: @definition;
+        }
+
+        &.syntax--value {
+            .syntax--constant.syntax--language {
+                color: @keyword;
+            }
+        }
+    }
+}
