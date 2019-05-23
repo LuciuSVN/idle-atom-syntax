@@ -1,0 +1,64 @@
+// Support for Python, optimised for MagicPython.
+//
+// Console and traceback grammar, though incorporated into MagicPython, is
+// *not* supported.
+
+@import "../variables.less";
+
+.syntax--source.syntax--python {
+    .syntax--entity.syntax--name.syntax--function.syntax--decorator,
+    .syntax--meta.syntax--function-call {
+        color: @fg;
+    }
+
+    .syntax--keyword.syntax--operator {
+        &.syntax--arithmetic,
+        &.syntax--assignment,
+        &.syntax--bitwise,
+        &.syntax--comparison {
+            color: @fg;
+        }
+    }
+
+    // Prevent magic func names from being highlighted if they're called.
+    .syntax--meta.syntax--function-call .syntax--support.syntax--function.syntax--magic {
+        color: @fg;
+    }
+
+    /* BUILT-INS */
+
+    // NOTE: Legacy Python 2 built-ins are not supported.
+
+    .syntax--support {
+        &.syntax--function.syntax--builtin,
+        &.syntax--type {
+            color: @built-in;
+        }
+    }
+
+    /* DEFINITIONS */
+
+    .syntax--support.syntax--function.syntax--magic {
+        color: @definition;
+    }
+
+    /* KEYWORDS */
+
+    .syntax--constant.syntax--language {
+        color: @keyword;
+    }
+
+    .syntax--storage {
+        &.syntax--modifier.syntax--declaration,
+        &.syntax--type.syntax--class,
+        &.syntax--type.syntax--function {
+            color: @keyword;
+        }
+    }
+
+    /* STRINGS */
+
+    .syntax--meta.syntax--fstring {
+        color: @string;
+    }
+}
