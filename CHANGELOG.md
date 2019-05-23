@@ -1,4 +1,4 @@
-# 1.1.0 (2019/05/23)
+# 1.1.0
 Added support for Python via [MagicPython].
 
 MagicPython is supported over the core `language-python` as it provides better
